@@ -42,7 +42,7 @@ html{
 }
 body{
     font-size:1.6rem;
-    background-color: darkblue;
+    background: linear-gradient( #002875,#013f35);
     line-height:1.5;
     color:rgb(8,103,188);
     font-family: 'Sora', sans-serif;
@@ -69,18 +69,18 @@ h1, h2, h3{
 }
 h1{
     text-align: left;
-    color:darkblue;
+    color:rgb(9, 9, 63);
     font-size:5rem;
     margin-bottom: 4%;
 }
 h2{
-    font-size:3em;
+    font-size:3rem;
     text-align: left;
     margin-top: 7%;
 }
 
 h3{
-    font-size:2.5em;
+    font-size:2.5rem;
 }
 p{
     color:#b9e5c6;;
@@ -138,6 +138,10 @@ div.profile {
     border: 2px solid rgb(104,173,149);
     margin: 2% 0%;
 }
+
+#my-projects a{
+    color:rgb(17, 27, 36);
+}
 div.about div a{
     color:rgb(104,173,149);
     border: 0px;
@@ -168,12 +172,15 @@ img.portfolio-item{
 }
 
 div.project-title{
+    background-color:black;
+    color: rgb(154,223,249);
     text-align: center;
 }
 /* Footer Styles */
 footer{
-    background-color: rgb(104,173,149);
+    background-color: #01333f;
     width:100%;
+    padding-bottom: 2%;
 }
 div.contact {
     display:flex;
@@ -181,7 +188,6 @@ div.contact {
     justify-items: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(104,173,149);
     text-align: center;
 }
 
@@ -213,14 +219,19 @@ div.contact div a{
 /* mobile styles */
 @media(max-width:500px){
    /* Header Styles */
-    header {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background-image: none;
     }
     h1 {
-        background-color: rgb(7, 6, 22);
+        margin-bottom: 1%;
+        padding: 0px;
+        background-color: rgb(7, 6, 22, 0.5);
     }
     h1, .links {
-       color:#b9e5c6;
+       color:#dcf6e4;
        text-align: center;
     }
     .links{
@@ -245,7 +256,6 @@ div.contact div a{
         height: 50vh;
     }
 
-    /* About Section Styles */
     .about * {
         text-align: center;
     }
@@ -272,10 +282,16 @@ div.contact div a{
     
     #my-projects{
         margin: 5%;
-        color: blue;
         width: 15rem;
         height: 5rem;
     }
+
+    #my-projects a{
+        margin: 5%;
+        width: 15rem;
+        height: 5rem;
+    } 
+
     div.about div a{
         color: darkblue;
         font-size: 2rem ;
@@ -304,9 +320,7 @@ div.contact div a{
         text-align: center;
     }
     /* footer */
-    footer .linkedin, footer p, footer h2{
-        color: rgb(17, 27, 36);
-    }
+   
     
     footer h2, footer h3, #contact a{
         font-size: 20px;
@@ -320,7 +334,6 @@ div.contact div a{
         height:40vh;
         display: flex;
         align-items: center;
-        padding-bottom: 2%;
     }
 
     #contact{
