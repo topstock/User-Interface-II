@@ -42,7 +42,7 @@ html{
 }
 body{
     font-size:1.6rem;
-    background-color: rgb(0,47,102);
+    background: linear-gradient( #002875,#013f35);
     line-height:1.5;
     color:rgb(8,103,188);
     font-family: 'Sora', sans-serif;
@@ -69,7 +69,7 @@ h1, h2, h3{
 }
 h1{
     text-align: left;
-    color:white;
+    color:rgb(9, 9, 63);
     font-size:5rem;
     margin-bottom: 4%;
 }
@@ -102,10 +102,10 @@ header{
 }
 
 div.links a:first-child{
-    background-color: blue;
+    background-color: darkblue;
 }
 
-/* about section styles */
+/* About Section Styles */
 section {
     margin: 2% 0%;
 }
@@ -126,6 +126,7 @@ div.profile {
     background-image: url("https://picsum.photos/200/300");
     background-size: cover;
 }
+
 #my-projects{
     width: 20rem;
     display: flex;
@@ -136,6 +137,10 @@ div.profile {
     padding: 1%;
     border: 2px solid rgb(104,173,149);
     margin: 2% 0%;
+}
+
+#my-projects a{
+    color:rgb(17, 27, 36);
 }
 div.about div a{
     color:rgb(104,173,149);
@@ -149,31 +154,33 @@ div.about div a{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    height: 40vw;
 }
 
 
 div.portfolio-card{
     width: 22%;
+    height: 18vw;
     display: flex;
     flex-flow: column nowrap;
-    margin: 2% 0%;
+    margin: 1vw 0%;
 }
 
-div.portfolio-item p{
-    color: rgb(28,133,208,0.1);
-    line-height: 9;
-    padding: 2% 0%;
-    background-image: url("https://picsum.photos/200/300");
-    background-size: cover;
+img.portfolio-item{
+    height: 14vw;
+    width: 100%;
 }
 
 div.project-title{
+    background-color:black;
+    color: rgb(154,223,249);
     text-align: center;
 }
-/* footer */
+/* Footer Styles */
 footer{
-    background-color: rgb(104,173,149);
+    background-color: #01333f;
     width:100%;
+    padding-bottom: 2%;
 }
 div.contact {
     display:flex;
@@ -181,7 +188,6 @@ div.contact {
     justify-items: center;
     align-items: center;
     width: 100%;
-    background-color: rgb(104,173,149);
     text-align: center;
 }
 
@@ -195,7 +201,146 @@ div.contact {
 }
 
 div.contact div a{
-    color:rgb(104, 151, 173);
     border: 0px;
     background-color: rgb(17, 27, 36);
+}
+
+
+/* small desktop or large tab styles*/
+@media(max-width:800px){
+    h1{
+        color:rgb(0,30,60);
+        border-radius: 10px;
+        display:inline-block;
+        background-color:rgb(186, 226, 245, .5);
+    }
+}
+
+/* mobile styles */
+@media(max-width:500px){
+   /* Header Styles */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: none;
+    }
+    h1 {
+        margin-bottom: 1%;
+        padding: 0px;
+        background-color: rgb(7, 6, 22, 0.5);
+    }
+    h1, .links {
+       color:#dcf6e4;
+       text-align: center;
+    }
+    .links{
+        flex-direction: column;
+        align-items: space-around;
+        justify-items: center;
+        width:33%;
+        margin: 0 auto;
+    }
+    /* About Section Styles*/
+    div.about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    div.about div{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width:85%;
+        margin: 0 auto;
+        height: 50vh;
+    }
+
+    .about * {
+        text-align: center;
+    }
+    #two-wide{
+        margin: 0 auto;
+        height: 85%;
+    
+    }
+    .profile {
+        line-height: 8;
+    }
+    div.about div{
+        display: flex;
+        width: 70%;
+        height: 40%;
+    }
+    div.text p{
+        width: 85%
+    }
+    .about h2{
+        line-height: 1;
+        font-size: 4rem;
+    }
+    
+    #my-projects{
+        margin: 5%;
+        width: 15rem;
+        height: 5rem;
+    }
+
+    #my-projects a{
+        margin: 5%;
+        width: 15rem;
+        height: 5rem;
+    } 
+
+    div.about div a{
+        color: darkblue;
+        font-size: 2rem ;
+    }
+    
+    
+    /* Portfolio Section Styles */
+    
+    .portfolio-container {
+        height: 100%;
+    }
+    div.portfolio-card{
+        width: 44%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    
+    img.portfolio-item{
+        height: 28vw;
+        width: 100%;
+    }
+    
+    .project-title{
+        color: white;
+        text-align: center;
+    }
+    /* footer */
+   
+    
+    footer h2, footer h3, #contact a{
+        font-size: 20px;
+    }
+
+    footer *{
+        margin: 0 auto;
+    }
+
+    footer{
+        height:40vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #contact{
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        width: 50%;
+        height: 15vh;
+    }
 }
