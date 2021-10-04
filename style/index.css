@@ -69,7 +69,7 @@ h1, h2, h3{
 }
 h1{
     text-align: left;
-    color:white;
+    color:darkblue;
     font-size:5rem;
     margin-bottom: 4%;
 }
@@ -102,7 +102,7 @@ header{
 }
 
 div.links a:first-child{
-    background-color: blue;
+    background-color: darkblue;
 }
 
 /* about section styles */
@@ -149,22 +149,21 @@ div.about div a{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    height: 40vw;
 }
 
 
 div.portfolio-card{
     width: 22%;
+    height: 18vw;
     display: flex;
     flex-flow: column nowrap;
-    margin: 2% 0%;
+    margin: 1vw 0%;
 }
 
-div.portfolio-item p{
-    color: rgb(28,133,208,0.1);
-    line-height: 9;
-    padding: 2% 0%;
-    background-image: url("https://picsum.photos/200/300");
-    background-size: cover;
+img.portfolio-item{
+    height: 14vw;
+    width: 100%;
 }
 
 div.project-title{
@@ -198,4 +197,22 @@ div.contact div a{
     color:rgb(104, 151, 173);
     border: 0px;
     background-color: rgb(17, 27, 36);
+}
+
+
+/* small desktop or large tab styles*/
+@media(max-width:800px){
+
+}
+
+
+
+/* small desktop or large tab styles*/
+@media(max-width:500px){
+
+}
+
+/* mobile styles */
+@media(max-width:500px){
+
 }
